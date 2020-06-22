@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 56, 56);
+    color: #fff;
+    font-family: poppins;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.clock{
+    height: 350px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 20px solid #fff ;
+    border-radius: 50%;
+    background: #fff url(clock.png);
+    background-size: cover;
+    box-shadow: inset 0px 0px 30px rgba(0,0,0,0.1),
+               0 0 20px rgba(0,0,0,0.2),
+               0 0 4px rgba(255, 255, 255, 1);
+    z-index:100;
+}
+
+.clock::before{
+    content: " ";
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    position: absolute;
+    background-color: saddlebrown;
+    z-index: 5;
+}
+
+.hour,.minute,.second{
+    position: absolute;
+}
+
+.hour,.hr{
+    height: 160px;
+    width: 160px;
+}
+.minute,.mn{
+    height: 190px;
+    width: 190px;
+}
+.second,.sc{
+    height: 230px;
+    width: 230px;
+}
+
+.hr ,.mn ,.sc{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.hr::before{
+    content: " ";
+    width: 8px;
+    height: 80px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(146, 108, 81);
+}
+
+.mn::before{
+    content: " ";
+    width: 6px;
+    height: 120px;
+    border-radius: 10px;
+    background-color:rgba(34, 41, 37, 1);
+}
+.sc::before{
+    content: " ";
+    width: 3px;
+    height: 140px;
+    border-radius: 10px;
+    background-color:rgb(163, 62, 62);
+}
+
+
+
+
+.digital{
+    height: 100px;
+    width:350px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.digital .dhr{
+    height: 100%;
+    background-color:  rgb(146, 108, 81);
+    border: none;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    text-align: center;
+    padding: 5%;
+    
+}
+.digital .dmn{
+    height: 100%;
+    background-color: rgba(34, 41, 37, 1);
+    text-align: center;
+    padding: 5%;
+}
+.digital .dsc{
+    height: 100%;
+    border: none;
+    background-color: rgb(163, 62, 62);
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+    padding: 5%;
+}
